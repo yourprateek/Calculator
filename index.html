@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="./SVGs/divide.svg">
+</head>
+
+<body>
+    <header> <h1>Calculator</h1> </header>
+
+    <main>
+        <div class="calc"> 
+            <div class="charger"> <hr> <hr> <hr> </div>
+            <input id="inp" readonly value="0">
+            <div class="keys">
+                <div class="numbers">
+                    <button class="number" onclick="appendDisplay('7')" style="border-top-left-radius: 10px;">7</button>
+                    <button class="number" onclick="appendDisplay('8')" >8</button>
+                    <button class="number" onclick="appendDisplay('9')" >9</button>
+                    <button class="number" onclick="appendDisplay('4')" >4</button>
+                    <button class="number" onclick="appendDisplay('5')" >5</button>
+                    <button class="number" onclick="appendDisplay('6')" >6</button>
+                    <button class="number" onclick="appendDisplay('1')" >1</button>
+                    <button class="number" onclick="appendDisplay('2')" >2</button>
+                    <button class="number" onclick="appendDisplay('3')" >3</button>
+                    <button class="number" onclick="appendDisplay('0')" style="border-bottom-left-radius: 10px;" >0</button>
+                    <button class="number" onclick="appendDisplay('00')">00</button>
+                    <button class="number" onclick="appendDisplay('.')">.</button>
+                </div>
+                <div class="operators">
+                    <button class="operator highlighted_operator" onclick="deAppendDisplay()">
+                        <img src="./SVGs/backspace.svg">
+                    </button>
+                    <button class="operator highlighted_operator" style="color: white; border-top-right-radius: 10px;" onclick="clearDisplay()">C</button>
+                    <button class="operator" onclick="appendDisplay('*')">
+                        <img src="./SVGs/multiply.svg">
+                    </button>
+                    <button class="operator" onclick="appendDisplay('/')">
+                        <img src="./SVGs/divide.svg">
+                    </button>
+                    <button class="operator" onclick="appendDisplay('+')">+</button>
+                    <button class="operator" onclick="appendDisplay('-')">-</button>
+                    <button class="operator" id="equal-btn" style="border-bottom-right-radius: 10px;" onclick="calculate()">=</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="index.js"></script>
+</body>
+</html>
